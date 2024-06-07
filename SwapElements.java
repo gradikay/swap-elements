@@ -4,7 +4,6 @@
  * @version 6/7/24
  */
 package secondProject;
-
 public class SwapElements {
 
     /**
@@ -14,6 +13,8 @@ public class SwapElements {
      * @param secondE the index of the second element to swap
      */
     public static <T> void swapElements(T[] array, int firstE, int secondE) {
+    	int size = array.length;
+    	if(firstE > size - 1 || secondE > size - 1 || firstE < 0 || secondE < 0) return; // integer out of bound
         T temp = array[firstE];
         array[firstE] = array[secondE];
         array[secondE] = temp;
@@ -41,7 +42,7 @@ public class SwapElements {
         System.out.println();
 
         // Swap elements in the arrays
-        swapElements(intArray, 2, 0);
+        swapElements(intArray, 2, 3);
         swapElements(strArray, 2, 0);
 
         // Display the arrays after swapping elements
