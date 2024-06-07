@@ -6,9 +6,9 @@ This generic Java method swaps two elements of any data type - College
      * @author Gradi Kayamba
      * @version 6/7/24
      */
-
+    package secondProject;
     public class SwapElements {
-
+    
         /**
          * This generic method swaps two elements in the given array
          * @param array the array of elements
@@ -16,6 +16,8 @@ This generic Java method swaps two elements of any data type - College
          * @param secondE the index of the second element to swap
          */
         public static <T> void swapElements(T[] array, int firstE, int secondE) {
+        	int size = array.length;
+        	if(firstE > size - 1 || secondE > size - 1 || firstE < 0 || secondE < 0) return; // integer out of bound
             T temp = array[firstE];
             array[firstE] = array[secondE];
             array[secondE] = temp;
@@ -43,7 +45,7 @@ This generic Java method swaps two elements of any data type - College
             System.out.println();
     
             // Swap elements in the arrays
-            swapElements(intArray, 2, 0);
+            swapElements(intArray, 2, 3);
             swapElements(strArray, 2, 0);
     
             // Display the arrays after swapping elements
